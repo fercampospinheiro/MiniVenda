@@ -1,73 +1,56 @@
-package br.com.lifejesus.minivenda.model;
+package br.com.lifejesus.minivenda.domain;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_telefone")
-public class Telefone {
+@Table(name="tb_usuario")
+public class Usuario {
 
-	@Id
-	@GeneratedValue
+	@Id@GeneratedValue
 	private Integer id;
-	@Column(length = 10)
-	private String residencial;
-	@Column(length = 10)
-	private String comercial;
-	@OneToOne(mappedBy = "idTelefone")
-	@JoinColumn(name = "idCliente")
+	private String email;
+	private String senha;
+	@OneToOne(mappedBy="usuario")
 	private Cliente cliente;
-
+	
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	public String getResidencial() {
-		return residencial;
+	public String getEmail() {
+		return email;
 	}
-
-	public void setResidencial(String residencial) {
-		this.residencial = residencial;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-
-	public String getComercial() {
-		return comercial;
+	public String getSenha() {
+		return senha;
 	}
-
-	public void setComercial(String comercial) {
-		this.comercial = comercial;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
-
 	public Cliente getCliente() {
 		return cliente;
 	}
-
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((cliente == null) ? 0 : cliente.hashCode());
-		result = prime * result
-				+ ((comercial == null) ? 0 : comercial.hashCode());
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result
-				+ ((residencial == null) ? 0 : residencial.hashCode());
+		result = prime * result + ((senha == null) ? 0 : senha.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -76,34 +59,33 @@ public class Telefone {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Telefone other = (Telefone) obj;
+		Usuario other = (Usuario) obj;
 		if (cliente == null) {
 			if (other.cliente != null)
 				return false;
 		} else if (!cliente.equals(other.cliente))
 			return false;
-		if (comercial == null) {
-			if (other.comercial != null)
+		if (email == null) {
+			if (other.email != null)
 				return false;
-		} else if (!comercial.equals(other.comercial))
+		} else if (!email.equals(other.email))
 			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (residencial == null) {
-			if (other.residencial != null)
+		if (senha == null) {
+			if (other.senha != null)
 				return false;
-		} else if (!residencial.equals(other.residencial))
+		} else if (!senha.equals(other.senha))
 			return false;
 		return true;
 	}
-
 	@Override
 	public String toString() {
-		return "Telefone [id=" + id + ", residencial=" + residencial
-				+ ", comercial=" + comercial + ", cliente=" + cliente + "]";
+		return "Usuario [id=" + id + ", email=" + email + ", senha=" + senha
+				+ ", cliente=" + cliente + "]";
 	}
-
+	
 }

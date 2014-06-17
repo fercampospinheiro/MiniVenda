@@ -1,4 +1,4 @@
-package br.com.lifejesus.minivenda.controller;
+package br.com.lifejesus.minivenda.presentation;
 
 import javax.servlet.http.HttpSession;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.com.lifejesus.minivenda.model.Usuario;
+import br.com.lifejesus.minivenda.domain.Usuario;
 
 @Controller
 public class LoginController {

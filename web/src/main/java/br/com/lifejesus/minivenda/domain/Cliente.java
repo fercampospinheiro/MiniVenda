@@ -1,4 +1,4 @@
-package br.com.lifejesus.minivenda.model;
+package br.com.lifejesus.minivenda.domain;
 
 //~--- JDK imports ------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-package br.com.lifejesus.minivenda.controller;
+package br.com.lifejesus.minivenda.presentation;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -9,10 +9,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.com.lifejesus.minivenda.model.Cliente;
-import br.com.lifejesus.minivenda.model.ItemPedido;
-import br.com.lifejesus.minivenda.model.Pedido;
-import br.com.lifejesus.minivenda.model.Produto;
+import br.com.lifejesus.minivenda.domain.Cliente;
+import br.com.lifejesus.minivenda.domain.ItemPedido;
+import br.com.lifejesus.minivenda.domain.Pedido;
+import br.com.lifejesus.minivenda.domain.Produto;
 
 @Controller
 @RequestMapping("/vendas")

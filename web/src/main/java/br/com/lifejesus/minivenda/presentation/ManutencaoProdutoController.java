@@ -1,11 +1,11 @@
-package br.com.lifejesus.minivenda.controller;
+package br.com.lifejesus.minivenda.presentation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.com.lifejesus.minivenda.model.Produto;
+import br.com.lifejesus.minivenda.domain.Produto;
 
 @Controller
 @RequestMapping("/manutencaoProduto")

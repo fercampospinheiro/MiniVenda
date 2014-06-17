@@ -1,4 +1,4 @@
-package br.com.lifejesus.minivenda.model;
+package br.com.lifejesus.minivenda.domain;
 
 import java.util.Calendar;
 import java.util.List;
