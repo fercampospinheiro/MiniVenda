@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity
+//@Entity
 @Table(name="tb_usuario")
 public class Usuario {
 

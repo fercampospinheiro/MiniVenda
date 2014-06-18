@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
       <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cadastro de Clientes</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 	
 		<form:label path="">nome</form:label>
 		<form:input path="nome"/>	
-		<form:label path="">Endereço :</form:label>
+		<form:label path="">EndereÃ§o :</form:label>
 		<form:input path="endereco.logradouro"/>
 		<form:label path="">numero :</form:label>
 		<form:input path="endereco.numero"/>

@@ -7,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity
+//@Entity
 @Table(name="tb_item_pedido")
 public class ItemPedido {
 
