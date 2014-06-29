@@ -369,17 +369,18 @@
         <!--
         **********************************************************************************************************
          ***
-         ***  BoneCP
+         ***  HikariCP
          ***
          **********************************************************************************************************
         -->
 
         <dependency>
-            <groupId>com.jolbox</groupId>
-            <artifactId>bonecp</artifactId>
-            <version>0.8.0.RELEASE</version>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>1.4.0</version>
+            <scope>compile</scope>
         </dependency>
-
+        
         <!--
          **********************************************************************************************************
          ***
