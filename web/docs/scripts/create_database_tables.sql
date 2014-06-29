@@ -2,11 +2,11 @@
 
 delimiter ;
 
-drop schema if exists `ziukuiz`;
+drop schema if exists `webdb`;
 
-CREATE DATABASE `ziukuiz`
+CREATE DATABASE `webdb`
   DEFAULT CHARACTER SET utf8
   DEFAULT COLLATE utf8_unicode_ci;
 
-use ziukuiz;
+use webdb;
 
