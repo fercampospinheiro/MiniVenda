@@ -8,7 +8,6 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/spring/application-context-entityManagerFactory.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/spring/application-context-transactionManager.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/spring/application-context.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/spring/servlet-context-controllers.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/spring/servlet-context.xml" charset="UTF-8" />
   </component>
 </project>
