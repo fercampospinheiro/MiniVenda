@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-//@Entity
+@Entity
 @Table(name = "tb_telefone")
 public class Telefone {
 
@@ -19,9 +19,9 @@ public class Telefone {
 	private String residencial;
 	@Column(length = 10)
 	private String comercial;
-	@OneToOne(mappedBy = "idTelefone")
-	@JoinColumn(name = "idCliente")
-	private Cliente cliente;
+	@OneToOne(mappedBy = "telefone")
+	@JoinColumn(name="idCliente")
+    private Cliente cliente;
 
 	public Integer getId() {
 		return id;

@@ -1,13 +1,8 @@
 package br.com.lifejesus.minivenda.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-//@Entity
+@Entity
 @Table(name="tb_item_pedido")
 public class ItemPedido {
 
@@ -16,7 +11,9 @@ public class ItemPedido {
 	@ManyToOne
 	@JoinColumn(name="idPedido")
 	private Pedido pedido;
-	private Produto produto;
+	@OneToOne
+    @JoinColumn(name="idProduto")
+    private Produto produto;
 	private int quantidade;
 	
 	public ItemPedido() {

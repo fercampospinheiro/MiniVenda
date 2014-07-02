@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-//@Entity
+@Entity
 @Table(name = "tb_categoria")
 public class Categoria {
 	@Id

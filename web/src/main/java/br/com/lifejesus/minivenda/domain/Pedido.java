@@ -3,13 +3,9 @@ package br.com.lifejesus.minivenda.domain;
 import java.util.Calendar;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-//@Entity
+@Entity
 @Table(name = "tb_pedido")
 public class Pedido {
 
@@ -17,7 +13,9 @@ public class Pedido {
 	@GeneratedValue
 	private Integer id;
 	private Calendar data;
-	private Cliente cliente;
+	@OneToOne
+    @JoinColumn(name="idCliente")
+    private Cliente cliente;
 	@OneToMany(mappedBy = "pedido")
 	private List<ItemPedido> itemPedido;
 
