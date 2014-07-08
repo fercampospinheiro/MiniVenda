@@ -13,7 +13,7 @@ public class UsuarioRepository {
     @PersistenceContext
     private EntityManager em;
 
-    public Set<User> buscaTodos() {
-        return Sets.newHashSet(em.createQuery("select u from User u", User.class).getResultList());
+    public Set<Usuario> buscaTodos() {
+        return Sets.newHashSet(em.createQuery("select u from Usuario u", Usuario.class).getResultList());
     }
 }

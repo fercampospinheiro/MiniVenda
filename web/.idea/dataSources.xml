@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2601495295">
+  <component name="DataSourceManagerImpl" format="xml" hash="2274740742">
     <data-source source="LOCAL" name="MySQL - webdb@localhost" uuid="31e37dc3-b105-4a04-9f91-a74b092fc4e2">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -27,6 +27,8 @@
       <jdbc-url>jdbc:jtds:sqlserver://192.0.1.6/SIDLAR</jdbc-url>
       <user-name>sa</user-name>
       <user-password>dfd9dfdbdfc6dfd9dfc3dfce</user-password>
+      <schema-pattern>SIDLAR.*</schema-pattern>
+      <default-schemas>SIDLAR.*</default-schemas>
       <libraries />
     </data-source>
   </component>

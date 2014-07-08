@@ -15,7 +15,7 @@
 		<form:input path="nome"/>
 		
 		<form:label path="">Fornecedor :</form:label>
-		<form:input path="fornecedor.nome"/>
+		<form:input path="fornecedores[0].nome"/>
 		
 		<form:label path="">categoria do produto :</form:label>
 		<form:input path="categorias[0].nome"/>

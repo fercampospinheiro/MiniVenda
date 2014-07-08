@@ -1,5 +1,8 @@
 package br.com.lifejesus.minivenda.presentation;
 
+import br.com.lifejesus.minivenda.domain.ProdutoRepository;
+import br.com.lifejesus.minivenda.domain.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,17 +11,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import br.com.lifejesus.minivenda.domain.Produto;
 
 @Controller
-@RequestMapping("/manutencaoProduto")
+@RequestMapping("/Produto")
 public class ManutencaoProdutoController {
 
-	@RequestMapping(value="/registra", method=RequestMethod.GET)
-	public String  preparaViewProduto(Model model, Produto produto) {	
-		model.addAttribute("produto",produto);
-		return "manutencao/produto/cadastro";
+    private ProdutoRepository produtoRepository;
+
+	@RequestMapping(value="/cadastro", method=RequestMethod.GET)
+	public String  preparaCadastroDeProduto(Model model, Produto produto) {
+        model.addAttribute("produto",produto);
+		return "/manutencao/produto/cadastro";
 	}
 	
-	@RequestMapping(value="/registra", method=RequestMethod.POST)
-	public String  registraProduto(Produto produto, Model model) {	
+	@RequestMapping(value="/cadastro", method=RequestMethod.POST)
+	public String  registraProduto(Produto produto, Model model) {
+        produtoRepository.cadastraProduto(produto);
 		return "manutencao/produto/confirmacao";
 	}
 	
