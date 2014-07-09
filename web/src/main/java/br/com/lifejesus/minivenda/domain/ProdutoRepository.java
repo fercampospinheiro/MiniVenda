@@ -1,5 +1,9 @@
 package br.com.lifejesus.minivenda.domain;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -10,24 +14,25 @@ import java.util.List;
 /**
  * Created by FERNANDOSIS on 08/07/14.
  */
+@Component
 public class ProdutoRepository {
 
     @PersistenceContext
     private EntityManager em;
 
     public List<Produto> buscaProdutos(){
-        return new ArrayList<Produto>(em.createQuery("select p from Produto p",Produto.class).getResultList());
+        return Lists.newArrayList(em.createQuery("select p from Produto p",Produto.class).getResultList());
     }
 
-    public void cadastraProduto (Produto produto){
+    public void adicionaNovoProduto(Produto produto){
         em.persist(produto);
     }
 
-    public void alteraProdutoCadastrado(Produto produto){
+    public void alteraProduto(Produto produto){
         em.merge(produto);
     }
 
-    public void removeProdutoCadastrado(Produto produto){
+    public void removeProduto(Produto produto){
         em.remove(produto);
     }
 
@@ -35,12 +40,12 @@ public class ProdutoRepository {
         Query query = em.createQuery("select p from Produto p");
         query.setMaxResults(numeroDeRegistros);
         query.setFirstResult(indiceInicial);
-        return new ArrayList<Produto>(query.getResultList());
+        return Lists.newArrayList(query.getResultList());
     }
 
     public List<Produto> buscaProdutosEmPromocao(){
         Query query = em.createNativeQuery("select ");
-        return new ArrayList<>();
+        return new ArrayList<Produto>();
     }
 
 

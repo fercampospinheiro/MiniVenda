@@ -1,7 +1,8 @@
 package br.com.lifejesus.minivenda.presentation;
 
+import br.com.lifejesus.minivenda.domain.CategoriaRepository;
+import br.com.lifejesus.minivenda.domain.FornecedorRepository;
 import br.com.lifejesus.minivenda.domain.ProdutoRepository;
-import br.com.lifejesus.minivenda.domain.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,18 +14,24 @@ import br.com.lifejesus.minivenda.domain.Produto;
 @Controller
 @RequestMapping("/Produto")
 public class ManutencaoProdutoController {
-
+    @Autowired
     private ProdutoRepository produtoRepository;
+    @Autowired
+    private FornecedorRepository fornecedorRepository;
+    @Autowired
+    private CategoriaRepository categoriaRepository;
 
 	@RequestMapping(value="/cadastro", method=RequestMethod.GET)
 	public String  preparaCadastroDeProduto(Model model, Produto produto) {
         model.addAttribute("produto",produto);
-		return "/manutencao/produto/cadastro";
+		model.addAttribute("fornecedores", fornecedorRepository.buscaTodosFornecedores());
+        model.addAttribute("categorias",categoriaRepository.buscaTodasCategorias());
+        return "/manutencao/produto/cadastroProduto";
 	}
 	
 	@RequestMapping(value="/cadastro", method=RequestMethod.POST)
-	public String  registraProduto(Produto produto, Model model) {
-        produtoRepository.cadastraProduto(produto);
+	public String  adicionaNovoProduto(Produto produto, Model model) {
+        produtoRepository.adicionaNovoProduto(produto);
 		return "manutencao/produto/confirmacao";
 	}
 	

@@ -6,10 +6,6 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/webdb</jdbc-url>
-      <user-name>fernando</user-name>
-      <user-password>dfd9dfdfdfcfdfc6dfc3df98df9adf9bdf9b</user-password>
-      <schema-pattern>webdb.*</schema-pattern>
-      <default-schemas>webdb.*</default-schemas>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
@@ -25,10 +21,6 @@
       <synchronize>true</synchronize>
       <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:jtds:sqlserver://192.0.1.6/SIDLAR</jdbc-url>
-      <user-name>sa</user-name>
-      <user-password>dfd9dfdbdfc6dfd9dfc3dfce</user-password>
-      <schema-pattern>SIDLAR.*</schema-pattern>
-      <default-schemas>SIDLAR.*</default-schemas>
       <libraries />
     </data-source>
   </component>
