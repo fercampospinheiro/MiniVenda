@@ -13,7 +13,7 @@ import br.com.lifejesus.minivenda.domain.Produto;
 
 @Controller
 @RequestMapping("/Produto")
-public class ManutencaoProdutoController {
+public class ProdutoController {
     @Autowired
     private ProdutoRepository produtoRepository;
     @Autowired

@@ -9,7 +9,7 @@ import br.com.lifejesus.minivenda.domain.Cliente;
 
 @Controller
 @RequestMapping("/manutencaoCliente")
-public class ManutencaoClienteController {
+public class ClienteController {
 
 	@RequestMapping(value="/registra", method=RequestMethod.GET)
 	public String preparaViewCliente(Cliente cliente, Model model) {
