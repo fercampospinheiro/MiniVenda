@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - webdb@localhost" uuid="31e37dc3-b105-4a04-9f91-a74b092fc4e2">
+      <user-name>fernando</user-name>
+      <user-password>dfd9dfdfdfcfdfc6dfc3df98df9adf9bdf9b</user-password>
+      <schema-pattern>webdb.*</schema-pattern>
+      <default-schemas>webdb.*</default-schemas>
+    </data-source>
+    <data-source name="SQL Server - SIDLAR@192.0.1.6" uuid="319bcd5f-1b2b-4090-ae62-6936be4c253e">
+      <user-name>sa</user-name>
+      <user-password>dfd9dfdbdfc6dfd9dfc3dfce</user-password>
+      <schema-pattern>SIDLAR.*</schema-pattern>
+      <default-schemas>SIDLAR.*</default-schemas>
+    </data-source>
+  </component>
+</project>
+
