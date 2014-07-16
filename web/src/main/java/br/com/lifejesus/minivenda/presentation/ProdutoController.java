@@ -37,13 +37,11 @@ public class ProdutoController {
 	
 	@RequestMapping(value="/atualiza", method=RequestMethod.POST)
 	public String atualizarIformacaoProduto(Produto produto, Model model) {
-		
 		return "manutencao/produto/descricao";
 	}
 	
 	@RequestMapping(value="/registrados", method=RequestMethod.GET)
 	public String listaProdutos(Model  model) {
-		
 		return "manutencao/produto/registrados";
 	}
 	@RequestMapping(value="/localiza", method=RequestMethod.POST)

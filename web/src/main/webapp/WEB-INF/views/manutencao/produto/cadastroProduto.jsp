@@ -2,32 +2,84 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="../resources/bootstrap/3_1_1/css//bootstrap-responsive.css" rel="stylesheet">
+<link href="../resources/bootstrap/3_1_1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../resources/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://bootsnipp.com/css/bootsnipp.css?ver=3dad078c6953f3a8a72bbfccae6365ae">
+
 <title>Cadastro de Produtos</title>
+
 </head>
 <body>
-
-	<form:form modelAttribute="produto">
-	
-		<form:label path="">nome</form:label>
-		<form:input path="nome"/>
+ <div class="container">
+	<form:form modelAttribute="produto" cssClass="form-horizontal" >
+		<fieldset>
 		
-		<form:label path="">Fornecedor :</form:label>
-        <c:forEach var="fornecedor" items="${fornecedores}">
-		 <form:select path="fornecedores[0].nome">
-            <form:option value="${fornecedor.nome}" label="${fornecedor.nome}"/>
-        </form:select> 
-		</c:forEach>
-		<form:label path="">categoria do produto :</form:label>
-		<form:input path="categorias[0].nome"/>
-		<form:input path="categorias[1].nome"/>
-		<form:button type="submit">enviar</form:button>
-	
+			<!-- Nomr do Formulário -->
+			<legend>Cadastro de Produtos</legend>
+			
+			<!-- Text -->
+			<div class="form-group">
+			  <form:label cssClass="col-md-4 control-label" path="">nome</form:label> 
+			  <div class="col-md-4">
+			  <form:input path="nome" cssClass="form-control input-md" />  
+			  </div>
+			</div>
+			
+			<!-- Select Multiplo -->
+			<div class="form-group">
+			  <form:label cssClass="col-md-4 control-label" path="">Fornecedores :</form:label>
+			  <div class="col-md-4"> 
+				<form:select path="fornecedores" cssClass="form-control" multiple="multiple" data-role="tagsinput">
+					<c:forEach var="fornecedor" items="${fornecedores}">	
+						<form:option value="${fornecedor.nome}">${fornecedor.nome}</form:option>
+					</c:forEach>	
+				</form:select>	
+			  </div>
+			</div>
+			
+			<!-- Select Multiplo -->
+			<div class="form-group">
+			  <form:label cssClass="col-md-4 control-label" path="">Categorias :</form:label>
+			  <div class="col-md-4">
+			    <form:select path="categorias" cssClass="form-control" multiple="multiple" data-role="tagsinput" >
+					<c:forEach var="categoria" items="${categorias}">
+						<form:option value="${categoria.nome}">${categoria.nome}</form:option>
+					</c:forEach>
+				</form:select>	
+			  </div>
+			</div>
+			
+			<!-- Botão -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="gravarProduto"></label>
+			  <div class="col-md-4">
+			    <form:button type="submit" class="btn btn-primary">Gravar</form:button>
+			  </div>
+			</div>
+			
+		</fieldset>
 	</form:form>
+		
+<script type="text/javascript">
+	$("select").tagsinput("");
+</script>
 
-
+		
+</div>
+ 	<!-- Jquery e Bootstrap -->
+ 	<script src="../resources/jquery/2_1_1/jquery-2.1.1.min.js"></script>
+  	<script src="../resources/bootstrap/3_1_1/js/bootstrap.min.js"></script>
+	<script src="../resources/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+	<script src="http://bootsnipp.com/js/scripts.min.js"></script>
 </body>
 </html>
