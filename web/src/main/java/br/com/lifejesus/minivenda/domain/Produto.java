@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,8 +25,7 @@ public class Produto {
 	@JoinTable(name = "tb_produto_tb_fornecedor", joinColumns = @JoinColumn(name = "idProduto"), inverseJoinColumns = @JoinColumn(name = "idFornecedor"))
 	private List<Fornecedor> fornecedores = new ArrayList<Fornecedor>();
 
-	@ManyToMany
-	@JoinTable(name = "tb_produto_tb_categoria", joinColumns = @JoinColumn(name = "idProduto"), inverseJoinColumns = @JoinColumn(name = "idCategoria"))
+	@OneToOne(mappedBy="produto")
 	private Collection<Categoria> categorias = new ArrayList<Categoria>();
 
 	public Produto() {

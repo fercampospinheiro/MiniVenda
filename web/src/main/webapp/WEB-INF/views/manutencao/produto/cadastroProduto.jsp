@@ -51,9 +51,9 @@
 			<div class="form-group">
 			  <form:label cssClass="col-md-4 control-label" path="">Categorias :</form:label>
 			  <div class="col-md-4">
-			    <form:select path="categorias" cssClass="form-control" multiple="multiple" data-role="tagsinput" >
-					<c:forEach var="categoria" items="${categorias}">
-						<form:option value="${categoria.nome}">${categoria.nome}</form:option>
+			    <form:select path="" cssClass="form-control" multiple="multiple" data-role="tagsinput" >
+					<c:forEach var="categoria" items="${categorias}" varStatus="index">
+						<form:option  value="${categoria.nome}">${categoria.nome}</form:option>
 					</c:forEach>
 				</form:select>	
 			  </div>

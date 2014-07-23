@@ -1,15 +1,20 @@
 package br.com.lifejesus.minivenda.presentation;
 
-import br.com.lifejesus.minivenda.domain.CategoriaRepository;
-import br.com.lifejesus.minivenda.domain.FornecedorRepository;
-import br.com.lifejesus.minivenda.domain.ProdutoRepository;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.com.lifejesus.minivenda.domain.Categoria;
+import br.com.lifejesus.minivenda.domain.CategoriaRepository;
+import br.com.lifejesus.minivenda.domain.Fornecedor;
+import br.com.lifejesus.minivenda.domain.FornecedorRepository;
 import br.com.lifejesus.minivenda.domain.Produto;
+import br.com.lifejesus.minivenda.domain.ProdutoRepository;
 
 @Controller
 @RequestMapping("/Produto")
@@ -30,8 +35,16 @@ public class ProdutoController {
 	}
 	
 	@RequestMapping(value="/cadastro", method=RequestMethod.POST)
-	public String  adicionaNovoProduto(Produto produto, Model model) {
-        produtoRepository.adicionaNovoProduto(produto);
+	public String  adicionaNovoProduto(
+		Produto produto,
+		@ModelAttribute("categorias")List<Categoria> categorias,
+		@ModelAttribute("fornecedores")	List<Fornecedor> fornecedores,
+		Model model
+		) {
+        
+		produto.setCategorias(categorias);
+        produto.setFornecedor(fornecedores);
+		produtoRepository.adicionaNovoProduto(produto);
 		return "manutencao/produto/confirmacao";
 	}
 	
