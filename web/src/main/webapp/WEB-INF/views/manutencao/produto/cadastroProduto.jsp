@@ -39,9 +39,9 @@
 			<div class="form-group">
 			  <form:label cssClass="col-md-4 control-label" path="">Fornecedores :</form:label>
 			  <div class="col-md-4"> 
-				<form:select path="fornecedores" cssClass="form-control" multiple="multiple" data-role="tagsinput">
+				<form:select path="produto.fornececedor.id" cssClass="form-control" multiple="multiple" data-role="tagsinput">
 					<c:forEach var="fornecedor" items="${fornecedores}">	
-						<form:option value="${fornecedor.nome}">${fornecedor.nome}</form:option>
+						<form:option value="${fornecedor.nome}" itemLabel="nome" itemValue="id">${fornecedor.nome}</form:option>
 					</c:forEach>	
 				</form:select>	
 			  </div>
@@ -51,9 +51,9 @@
 			<div class="form-group">
 			  <form:label cssClass="col-md-4 control-label" path="">Categorias :</form:label>
 			  <div class="col-md-4">
-			    <form:select path="" cssClass="form-control" multiple="multiple" data-role="tagsinput" >
+			    <form:select path="produto.categoria.id" cssClass="form-control" multiple="multiple" data-role="tagsinput" >
 					<c:forEach var="categoria" items="${categorias}" varStatus="index">
-						<form:option  value="${categoria.nome}">${categoria.nome}</form:option>
+						<form:option  value="${categoria.nome}" itemLabel="nome" itemValue="id">${categoria.nome}</form:option>
 					</c:forEach>
 				</form:select>	
 			  </div>

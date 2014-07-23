@@ -45,21 +45,21 @@ public class ProdutoController {
 		produto.setCategorias(categorias);
         produto.setFornecedor(fornecedores);
 		produtoRepository.adicionaNovoProduto(produto);
-		return "manutencao/produto/confirmacao";
+		return "/manutencao/confirmacao";
 	}
 	
 	@RequestMapping(value="/atualiza", method=RequestMethod.POST)
 	public String atualizarIformacaoProduto(Produto produto, Model model) {
-		return "manutencao/produto/descricao";
+		return "/manutencao/produto/descricao";
 	}
 	
 	@RequestMapping(value="/registrados", method=RequestMethod.GET)
 	public String listaProdutos(Model  model) {
-		return "manutencao/produto/registrados";
+		return "/manutencao/produto/registrados";
 	}
 	@RequestMapping(value="/localiza", method=RequestMethod.POST)
 	public String procuraProduto(int codigoProduto, Model model) {
-		return "manutencao/produto/descricao";
+		return "/manutencao/produto/descricao";
 	}
 	
 }
