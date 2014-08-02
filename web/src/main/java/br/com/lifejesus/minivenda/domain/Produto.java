@@ -4,14 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_produto")
@@ -25,93 +18,77 @@ public class Produto {
 	@JoinTable(name = "tb_produto_tb_fornecedor", joinColumns = @JoinColumn(name = "idProduto"), inverseJoinColumns = @JoinColumn(name = "idFornecedor"))
 	private List<Fornecedor> fornecedores = new ArrayList<Fornecedor>();
 
-	@OneToOne(mappedBy="produto")
-	private Collection<Categoria> categorias = new ArrayList<Categoria>();
+	@ManyToOne
+    @JoinColumn(name = "idCategoria")
+	private Categoria categoria;
 
 	public Produto() {
 	}
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public List<Fornecedor> getFornecedores() {
-		return fornecedores;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public void setFornecedor(List<Fornecedor> fornecedores) {
-		this.fornecedores = fornecedores;
-	}
+    public List<Fornecedor> getFornecedores() {
+        return fornecedores;
+    }
 
-	public Collection<Categoria> getCategorias() {
-		return categorias;
-	}
+    public void setFornecedores(List<Fornecedor> fornecedores) {
+        this.fornecedores = fornecedores;
+    }
 
-	public void setCategorias(Collection<Categoria> categorias) {
-		this.categorias = categorias;
-	}
+    public Categoria getCategoria() {
+        return categoria;
+    }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result
-				+ ((categorias == null) ? 0 : categorias.hashCode());
-		result = prime * result
-				+ ((fornecedores == null) ? 0 : fornecedores.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		return result;
-	}
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Produto other = (Produto) obj;
-		if (categorias == null) {
-			if (other.categorias != null)
-				return false;
-		} else if (!categorias.equals(other.categorias))
-			return false;
-		if (fornecedores == null) {
-			if (other.fornecedores != null)
-				return false;
-		} else if (!fornecedores.equals(other.fornecedores))
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
-			return false;
-		return true;
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Produto)) return false;
 
-	@Override
-	public String toString() {
-		return "Produto [id=" + id + ", nome=" + nome + ", fornecedor="
-				+ fornecedores + ", categorias=" + categorias + "]";
-	}
+        Produto produto = (Produto) o;
 
+        if (!categoria.equals(produto.categoria)) return false;
+        if (!fornecedores.equals(produto.fornecedores)) return false;
+        if (!id.equals(produto.id)) return false;
+        if (!nome.equals(produto.nome)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + nome.hashCode();
+        result = 31 * result + fornecedores.hashCode();
+        result = 31 * result + categoria.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", fornecedores=" + fornecedores +
+                ", categoria=" + categoria +
+                '}';
+    }
 }

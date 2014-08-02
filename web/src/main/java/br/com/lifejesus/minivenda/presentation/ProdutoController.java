@@ -41,9 +41,7 @@ public class ProdutoController {
 		@ModelAttribute("fornecedores")	List<Fornecedor> fornecedores,
 		Model model
 		) {
-        
-		produto.setCategorias(categorias);
-        produto.setFornecedor(fornecedores);
+
 		produtoRepository.adicionaNovoProduto(produto);
 		return "/manutencao/confirmacao";
 	}
