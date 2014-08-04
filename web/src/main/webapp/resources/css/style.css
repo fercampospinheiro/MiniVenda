@@ -6,3 +6,9 @@
 h4{
     font-weight: 600;
 }
+.jumbotron {
+    margin-bottom: 0px;
+    height: 250px;
+    margin-bottom: 0.5cm;
+    background-color:#1E90FF;
+}

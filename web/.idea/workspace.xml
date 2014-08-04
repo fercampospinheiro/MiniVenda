@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5ab86f6-6867-49e2-bccf-e21761a22eba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="web.iws" />
@@ -92,8 +89,8 @@
       <file leaf-file-name="home.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.265343" vertical-offset="0" max-vertical-offset="3893">
-              <caret line="139" column="30" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.36823106" vertical-offset="1037" max-vertical-offset="4029">
+              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -102,8 +99,8 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -135,8 +132,8 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/lifejesus/minivenda/domain/Categoria.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/lifejesus/minivenda/presentation/WebSiteController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/lifejesus/minivenda/presentation/ProdutoController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp" />
       </list>
     </option>
   </component>
@@ -815,17 +812,21 @@
       <workItem from="1407154224732" duration="381000" />
       <workItem from="1407158696019" duration="220000" />
       <workItem from="1407173476677" duration="10000" />
-      <workItem from="1407178347768" duration="3939000" />
+      <workItem from="1407178347768" duration="5418000" />
     </task>
     <task id="LOCAL-00001" summary="Inserção dos Repository de Categoria, Fornecedor e Produto">
       <created>1404938826613</created>
       <updated>1404938826613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Alteração na home">
+      <created>1407182313844</created>
+      <updated>1407182313844</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22845000" />
+    <option name="totallyTimeSpent" value="24324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -879,7 +880,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Inserção dos Repository de Categoria, Fornecedor e Produto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserção dos Repository de Categoria, Fornecedor e Produto" />
+    <MESSAGE value="Alteração na home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração na home" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -917,18 +919,23 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/image/promocao3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.265343" vertical-offset="0" max-vertical-offset="3893">
-          <caret line="139" column="30" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.36823106" vertical-offset="1037" max-vertical-offset="4029">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
           <folding />
         </state>
       </provider>
