@@ -12,3 +12,12 @@ h4{
     margin-bottom: 0.5cm;
     background-color:#1E90FF;
 }
+#imagem-categoria{
+    align-content: center;
+    width: 125px;
+    height: 125px;
+}
+#titulo-categoria{
+    font-weight: 600;
+    align-content: center;
+}

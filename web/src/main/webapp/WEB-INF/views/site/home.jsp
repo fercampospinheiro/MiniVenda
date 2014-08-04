@@ -78,7 +78,7 @@
                         <div class="item active">
                             <img src="../resources/image/promocao1.jpg" alt="...">
                             <div class="carousel-caption">
-                                <h4 align="center"><span class="label label-danger">10 X R$ 35,90</span></h4>
+                                ...
                             </div>
                         </div>
                         <div class="item">
@@ -115,19 +115,19 @@
         <div class="col-md-2">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Cozinha</h3>
+                    <h2 class="panel-title" id = "titulo-categoria">Cozinha</h2>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <img src="../resources/image/cozinha.png" alt="..." id="imagem-categoria">
                 </div>
             </div>
 
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Quarto</h3>
+                    <h2 class="panel-title" id = "titulo-categoria">Quarto</h2>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <img src="../resources/image/quarto.png" alt="..." id="imagem-categoria">
                 </div>
             </div>
         </div>
@@ -196,27 +196,27 @@
         <div class="col-md-2">
             <div class="panel panel-warning">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Sala</h3>
+                    <h2 class="panel-title" id = "titulo-categoria">Sala</h2>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <img src="../resources/image/sala.png" alt="..." id="imagem-categoria">
                 </div>
             </div>
             <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Decoração</h3>
+                    <h2 class="panel-title" id = "titulo-categoria">Decoração</h2>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <img src="../resources/image/decoracao.png" alt="..." id="imagem-categoria">
                 </div>
             </div>
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Praia</h3>
+                    <h2 class="panel-title" id = "titulo-categoria">Praia</h2>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <img src="../resources/image/praia.png" alt="..." id="imagem-categoria">
                 </div>
             </div>
         </div>
