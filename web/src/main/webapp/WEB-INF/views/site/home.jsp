@@ -8,12 +8,14 @@
 
 <link href="../resources/bootstrap-cosmo/3_1_1/css//bootstrap-responsive.css" rel="stylesheet">
 <link href="../resources/bootstrap-cosmo/3_1_1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-
+    <link href="../resources/css/style.css" rel="stylesheet" media="screen">
 <title>Insert title here</title>
 </head>
 <body>
 <div class="container">
-    <!- Barra de Navegação-->
+    <!- *********************************************************************
+        BARRA DE NAVEAGAÇÃO
+        *********************************************************************->
     <div class="navbar navbar-inverse">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
@@ -58,7 +60,9 @@
             </ul>
         </div>
     </div>
-    <!- Carousel ->
+    <!- *********************************************************************
+        BANNER COM CARROUSEL
+        *********************************************************************->
     <div class="jumbotron">
         <div class="col-md-6">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -95,8 +99,11 @@
             </a>
         </div>
     </div>
-    <!-Mini Paineis->
+    <!- *********************************************************************
+        CATEGORIAS DO LADO ESQUERDO
+        *********************************************************************->
     <div class="row">
+
         <div class="col-md-2">
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -116,10 +123,68 @@
                 </div>
             </div>
         </div>
-
+    <!- *********************************************************************
+        EXIBIÇÃO DOS PRODUTOS
+        *********************************************************************->
         <div class="col-md-8">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="../resources/image/produto1.jpg" alt="..." id="produto">
+                        <div class="caption">
+                            <h4>Cortina Paris</h4>
+                            <h1 align="center"><span class="label label-default">R$ 359,00</span></h1>
+                            <h4 align="center"><span class="label label-danger">10 X R$ 35,90</span></h4>
+                            <p>A melhor toalha de Santa Catarina</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="../resources/image/produto2.jpg" alt="..." id="produto">
+                        <div class="caption">
+                            <h4>Toalhas de mesa</h4>
+                            <h1 align="center"><span class="label label-default">R$ 50,00</span></h1>
+                            <h4 align="center"><span class="label label-danger">2 X R$ 25,00</span></h4>
+                            <p>A melhor toalha de Santa Catarina</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="../resources/image/produto3.jpg" alt="..." id="produto">
+                        <div class="caption">
+                            <h4>Tapetes Mohamade</h4>
+                            <h1 align="center"><span class="label label-default">R$ 1500,00</span></h1>
+                            <h4 align="center"><span class="label label-danger">10 X R$ 150,00</span></h4>
+                            <p>A melhor toalha de Santa Catarina</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="../resources/image/produto4.jpg" alt="..." id="produto">
+                        <div class="caption">
+                            <h4>Toalhas Catarinense</h4>
+                            <h1 align="center"><span class="label label-default">R$ 199,00</span></h1>
+                            <h4 align="center"><span class="label label-danger">3 X R$ 100,00</span></h4>
+                            <p>A melhor toalha de Santa Catarina</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Comprar</a></p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
 
         </div>
+    <!- *********************************************************************
+        CATEGORIAS DO LADO DIREITO
+        *********************************************************************->
         <div class="col-md-2">
             <div class="panel panel-warning">
                 <div class="panel-heading">
@@ -147,9 +212,10 @@
                 </div>
             </div>
         </div>
+    <!- *********************************************************************
+        RODAPÉ
+        *********************************************************************->
     </div>
-<span><h1>olá usuário</h1>
-<h1>Seja Bem vindo</h1></span>
  </div>
 <script src="../resources/jquery/2_1_1/jquery-2.1.1.min.js"></script>
 <script src="../resources/bootstrap-cosmo/3_1_1/js/bootstrap.min.js"></script>
