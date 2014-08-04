@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5ab86f6-6867-49e2-bccf-e21761a22eba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/site/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="web.iws" />
@@ -812,7 +810,7 @@
       <workItem from="1407154224732" duration="381000" />
       <workItem from="1407158696019" duration="220000" />
       <workItem from="1407173476677" duration="10000" />
-      <workItem from="1407178347768" duration="7454000" />
+      <workItem from="1407178347768" duration="7466000" />
     </task>
     <task id="LOCAL-00001" summary="Inserção dos Repository de Categoria, Fornecedor e Produto">
       <created>1404938826613</created>
@@ -826,11 +824,15 @@
       <created>1407183778285</created>
       <updated>1407183778285</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Alteração na home">
+      <created>1407185814099</created>
+      <updated>1407185814099</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26360000" />
+    <option name="totallyTimeSpent" value="26372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
